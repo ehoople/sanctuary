@@ -1,10 +1,6 @@
-jQuery(document).ready(function($) {
-  
-  <!-- FlexSlider -->
-  $('.flexslider').flexslider({
-    animation: "slide",
-    controlNav: "thumbnails"
-  });
+$(document).ready(function($) {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails"
+    });
 });
-
-
