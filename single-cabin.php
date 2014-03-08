@@ -28,7 +28,9 @@ get_header(); ?>
 		 		</div>
 			</div>
 
+
 			<?php
+
 			/*
 			*  View array data (for debugging)
 			*/
@@ -43,39 +45,34 @@ get_header(); ?>
 			$images = get_field('cabin_gallery');
 			 
 			if( $images ): ?>
+			    
 			    <div id="slider" class="flexslider">
-			        <ul class="slides">
-			            <?php foreach( $images as $image ): ?>
-			                <li>
-			                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			                    <p><?php echo $image['caption']; ?></p>
-			                </li>
-			            <?php endforeach; ?>
-			        </ul>
-			    </div>
-			    <?php
-			 
-			    /*
-			    *  The following code creates the thumbnail navigation
-			    */
-			 
-			    ?>
-			    <div id="carousel" class="flexslider">
-			        <ul class="slides">
-			            <?php foreach( $images as $image ): ?>
-			                <li>
-			                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-			                </li>
-			            <?php endforeach; ?>
-			        </ul>
-			    </div>
-			<?php endif; 
-			 
-			?>
+			    	
+			    	<ul class="flex-slides">
+			   			
+			   			<?php foreach( $images as $image ): ?>
+    						
+    						<li data-thumb="<?php echo $image['sizes']['thumbnail']; ?>">
+        						
+        						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        						<p><?php echo $image['caption']; ?></p>
+    						
+    						</li>
 
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			
+			<?php endif;
+
+			?>
+			
 		</div>
 
 	</main> <!-- #main -->
 </div> <!-- #primary -->
 
 <?php get_footer(); ?>
+
+
+
