@@ -92,8 +92,6 @@ function sanctuary_scripts() {
 
 	wp_enqueue_script( 'sanctuary-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'jquery-1.11.0.min', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array( 'jquery' ), false, true );
-
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.js', array(), '1.0.0', true );
 
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
