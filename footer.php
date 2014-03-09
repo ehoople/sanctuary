@@ -12,19 +12,29 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
+
 			<p> <?php the_field('copyright_text'); ?> </p>
-			<?php if( get_field('social_media_icon1') ): ?>
-				<img class="social-media" src="<?php the_field('social_media_icon1'); ?>" alt="social media icon" /><?php
-			endif; ?>
-			<?php if( get_field('social_media_icon2') ): ?>
-				<img class="social-media" src="<?php the_field('social_media_icon2'); ?>" alt="social media icon" /><?php
-			endif; ?>
-			<?php if( get_field('social_media_icon3') ): ?>
-				<img class="social-media" src="<?php the_field('social_media_icon3'); ?>" alt="social media icon" /><?php
-			endif; ?>
-			<?php if( get_field('social_media_icon4') ): ?>
-				<img class="social-media" src="<?php the_field('social_media_icon4'); ?>" alt="social media icon" /><?php
-			endif; ?>
+
+			<?php
+ 
+			// check if the repeater field has rows of data
+			if( have_rows('social_media_icons') ):
+			 
+			 	// loop through the rows of data
+			    while ( have_rows('social_media_icons') ) : the_row();
+			 ?>
+			        <!-- display a sub field value -->
+			        <img class="social-media" src="<?php the_sub_field('social_media_icon'); ?>" alt="social media icon" />
+			 <?php
+			    endwhile;
+			 
+			else :
+			 
+			    // no rows found
+			 
+			endif;
+			 
+			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
