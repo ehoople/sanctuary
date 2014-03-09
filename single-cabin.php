@@ -38,7 +38,7 @@ get_header(); ?>
 					    
 					    <div id="slider" class="flexslider">
 					    	
-					    	<ul class="flex-slides">
+					    	<ul class="slides">
 					   			
 					   			<?php foreach( $images as $image ): ?>
 		    						
