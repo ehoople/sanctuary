@@ -28,46 +28,38 @@ get_header(); ?>
 		 		</div>
 			</div>
 
+			<div id="cabin-gallery">
+				
+				<?php
+				 
+					$images = get_field('cabin_gallery');
+					 
+					if( $images ): ?>
+					    
+					    <div id="slider" class="flexslider">
+					    	
+					    	<ul class="flex-slides">
+					   			
+					   			<?php foreach( $images as $image ): ?>
+		    						
+		    						<li data-thumb="<?php echo $image['sizes']['thumbnail']; ?>">
+		        						
+		        						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		        						<p><?php echo $image['caption']; ?></p>
+		    						
+		    						</li>
 
-			<?php
+								<?php endforeach; ?>
+							</ul>
+						</div>
+				
+					<?php endif;
 
-			/*
-			*  View array data (for debugging)
-			*/
-			 
-			var_dump( get_field('cabin_gallery') );
-			 
-			/*
-			*  Create the Markup for a slider
-			*  This example will create the Markup for Flexslider (http://www.woothemes.com/flexslider/)
-			*/
-			 
-			$images = get_field('cabin_gallery');
-			 
-			if( $images ): ?>
-			    
-			    <div id="slider" class="flexslider">
-			    	
-			    	<ul class="flex-slides">
-			   			
-			   			<?php foreach( $images as $image ): ?>
-    						
-    						<li data-thumb="<?php echo $image['sizes']['thumbnail']; ?>">
-        						
-        						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-        						<p><?php echo $image['caption']; ?></p>
-    						
-    						</li>
+				?>
 
-						<?php endforeach; ?>
-					</ul>
-				</div>
-			
-			<?php endif;
+			</div> <!-- #cabin-gallery -->
 
-			?>
-			
-		</div>
+		</div> <!-- #cabin-content -->
 
 	</main> <!-- #main -->
 </div> <!-- #primary -->
