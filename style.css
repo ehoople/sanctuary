@@ -693,9 +693,9 @@ a:active {
  	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	top: 32px;
+  	top: 3204px;
 }
-.slide {
+.full-width-slide {
 	width: 100%;
 }
 .full-background {
@@ -772,7 +772,8 @@ a:active {
 	color: #FFF;
 	background: #577A28;;
 }
-.cost-details a:hover {
+a.button:hover {
+	background: #222F13;
 	color: #FFF;
 }
 .cost-details div {
@@ -780,19 +781,37 @@ a:active {
 }
 
 /* Cabin Gallery */
+#cabin-gallery {
+	width: 50%;
+	float: left;
+}
 .flexslider {
 	margin: 0 0 60px;
 	position: relative;
 }
-.flex-slides {
+.flex-viewport {
+	height: 400px;
+}
+.slides {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.flex-slides img {
-	margin: 60px 10px;
+.slides img {
+	max-width: 90%;
+	margin: 60px 10%;
 }
-
+#slider ol > li > img {
+	float: right;
+	width: 15%;
+	margin: 2%;
+}
+#slider > ol > li:nth-child(1) > img {
+	margin-right: 9%;
+}
+.flex-direction-nav {
+	display: none;
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -873,3 +892,16 @@ iframe,
 object {
 	max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
