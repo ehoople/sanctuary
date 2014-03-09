@@ -774,6 +774,21 @@ a:active {
 .cost-details div {
 	margin-bottom: 15px;
 }
+
+/* Cabin Gallery */
+.flexslider {
+	margin: 0 0 60px;
+	position: relative;
+}
+.flex-slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.flex-slides img {
+	margin: 60px 10px;
+}
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
